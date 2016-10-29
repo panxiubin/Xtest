@@ -2,17 +2,5 @@
   <h2>编辑课程</h2>
 
   <hr>
-  <%= form_for @course do |f| %>
-  <% if @course.errors.any? %>
-  <ul>
-    <% @course.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-  <% end %>
-  课程
-  <%= f.text_field :name %>
-  <br>
-  <%= f.submit "Submit", :disable_with => 'Submitting...' %>
-  <% end %>
+  <%= render "form" %>
 </div>
